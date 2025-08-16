@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlyWithUs - Your Journey Begins</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">FlyWithUs</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#book-flight">Book Flight</a></li>
+                <li><a href="#manage-booking">Manage Booking</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <h1>Welcome to FlyWithUs Airlines</h1>
+            <p>Your journey begins here. Experience comfort, safety, and world-class service on every flight.</p>
+            <ul style="list-style: none; padding: 0; margin: 20px 0 30px 0; color: #fff; font-size: 1.1rem;">
+                <li>✈️ 200+ Destinations Worldwide</li>
+                <li>🛫 Flexible Booking & 24/7 Support</li>
+                <li>💺 Award-Winning In-Flight Experience</li>
+            </ul>
+            <button class="btn" onclick="document.querySelector('[href=\'#book-flight\']').click()">Book a Flight</button>
+        </section>
+
+        <section class="featured-destinations" id="destinations">
+            <h2>Popular Destinations</h2>
+            <div class="destination-grid">
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1534430480872-dea5504775d7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="New York">
+                    <h3>New York</h3>
+                    <p>The city that never sleeps. Enjoy direct flights daily.</p>
+                    <p><strong>From $299</strong></p>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1502602898669-ee28731215c2?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Paris">
+                    <h3>Paris</h3>
+                    <p>Romance, art, and cuisine in the heart of Europe.</p>
+                    <p><strong>From $399</strong></p>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1540959733332-eab4deecc6b4?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Tokyo">
+                    <h3>Tokyo</h3>
+                    <p>Experience the vibrant culture and technology of Japan.</p>
+                    <p><strong>From $499</strong></p>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1465156799763-2c087c332922?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3" alt="London">
+                    <h3>London</h3>
+                    <p>Historic landmarks and modern attractions await you.</p>
+                    <p><strong>From $359</strong></p>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Sydney">
+                    <h3>Sydney</h3>
+                    <p>Sun, surf, and the iconic Opera House.</p>
+                    <p><strong>From $699</strong></p>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Dubai">
+                    <h3>Dubai</h3>
+                    <p>Luxury shopping, ultramodern architecture, and lively nightlife.</p>
+                    <p><strong>From $549</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="book-flight" style="padding: 50px 20px; text-align: center; display: none;">
+            <h2>Book Your Flight</h2>
+            <form class="booking-form" style="max-width: 400px; margin: 0 auto; text-align: left;">
+                <label for="from">From</label>
+                <input type="text" id="from" name="from" placeholder="City or Airport" required>
+
+                <label for="to">To</label>
+                <input type="text" id="to" name="to" placeholder="City or Airport" required>
+
+                <label for="depart">Departure Date</label>
+                <input type="date" id="depart" name="depart" required>
+
+                <label for="return">Return Date</label>
+                <input type="date" id="return" name="return">
+
+                <label for="passengers">Passengers</label>
+                <input type="number" id="passengers" name="passengers" min="1" value="1" required>
+
+                <button class="btn" type="submit" style="width: 100%; margin-top: 15px;">Search Flights</button>
+            </form>
+        </section>
+
+        <section id="manage-booking" style="padding: 50px 20px; text-align: center; display: none;">
+            <h2>Manage Your Booking</h2>
+            <form class="manage-form" style="max-width: 400px; margin: 0 auto; text-align: left;">
+                <label for="booking-ref">Booking Reference</label>
+                <input type="text" id="booking-ref" name="booking-ref" placeholder="e.g. ABC123" required>
+
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Your last name" required>
+
+                <button class="btn" type="submit" style="width: 100%; margin-top: 15px;">Retrieve Booking</button>
+            </form>
+            <p style="margin-top: 20px; color: #888;">View, change, or cancel your reservation easily.</p>
+        </section>
+
+        <section id="contact" style="padding: 50px 20px; text-align: center; display: none;">
+            <h2>Contact Us</h2>
+            <div style="max-width: 400px; margin: 0 auto; text-align: left;">
+                <p><strong>Customer Service:</strong> +1 800 555 1234</p>
+                <p><strong>Email:</strong> support@flywithus.com</p>
+                <p><strong>Address:</strong> 123 Aviation Ave, New York, NY, USA</p>
+                <form class="contact-form" style="margin-top: 20px;">
+                    <label for="contact-name">Name</label>
+                    <input type="text" id="contact-name" name="contact-name" required>
+
+                    <label for="contact-email">Email</label>
+                    <input type="email" id="contact-email" name="contact-email" required>
+
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" name="contact-message" rows="4" required></textarea>
+
+                    <button class="btn" type="submit" style="width: 100%; margin-top: 15px;">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto; padding: 20px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+            <div style="flex: 1 1 200px;">
+                <strong>FlyWithUs Airlines</strong><br>
+                &copy; 2023 FlyWithUs. All rights reserved.
+            </div>
+            <div style="flex: 1 1 200px; text-align: center;">
+                <a href="#home" style="color: #fff; margin: 0 10px; text-decoration: underline;">Home</a>
+                <a href="#destinations" style="color: #fff; margin: 0 10px; text-decoration: underline;">Destinations</a>
+                <a href="#book-flight" style="color: #fff; margin: 0 10px; text-decoration: underline;">Book</a>
+                <a href="#manage-booking" style="color: #fff; margin: 0 10px; text-decoration: underline;">Manage</a>
+                <a href="#contact" style="color: #fff; margin: 0 10px; text-decoration: underline;">Contact</a>
+            </div>
+            <div style="flex: 1 1 200px; text-align: right;">
+                <span style="font-size: 0.9rem; color: #bbb;">Terms & Conditions | Privacy Policy</span>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
